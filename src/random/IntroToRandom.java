@@ -12,8 +12,9 @@ import java.util.Random;
 public class IntroToRandom {
 	public static void main(String[] args) {
 		int r = 0;
-		r= new Random().nextInt();
-		
+		 Random randomMaker = new Random(); 
+		  r = randomMaker.nextInt(101);
+	
 		//2. Now make r random. 
 		//   Create an object of the Random class
 		//   Hint: new Random().nextInt()
@@ -21,11 +22,10 @@ public class IntroToRandom {
 		//3. Limit the random number between 0 and 100
 
 		//4. Limit the random number between 25 and 75. Hint: (highest value - lowest value) + lowest value
-
+		  r = randomMaker.nextInt(51)+25;
 		//5. Challenge: Limit the random number between -222 and 88
 
-
-		
+		  r = randomMaker.nextInt(310)+-222;
 		System.out.println(r); 
 	}
 }
