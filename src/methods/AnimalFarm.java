@@ -4,9 +4,8 @@ package methods;
 //Level 0
 
 
-import java.io.File;
+ 
 
-import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
 import javax.swing.JOptionPane;
@@ -21,20 +20,26 @@ AnimalFarm() {
 String sound = 
 	JOptionPane.showInputDialog(null,"which animal do you want" );
 
-if( sound.equals("Cow")) {
-playNoise(mooFile);
-}else if( sound.equals("duck")){
-playNoise(quackFile);
-}else if( sound.equals("dog")){
-playNoise(woofFile);
-}else if( sound.equals("cat")){
-playNoise(meowFile);
-}else if( sound.equals("llama")){
-playNoise(llamaFile);
+if( sound.equalsIgnoreCase("Cow")) {
+playMoo();
+}else if( sound.equalsIgnoreCase("duck")){
+playQuack();
+}else if( sound.equalsIgnoreCase("dog")){
+playWoof();
+}else if( sound.equalsIgnoreCase("cat")){
+playMeow();
+}else if( sound.equalsIgnoreCase("llama")){
+playLlama();
 }
 
 
 	/* 2. Make it so that the user can keep entering new animals. */
+}
+void playMeow() {
+	playNoise(meowFile);
+}
+void playLlama() {
+	playNoise(llamaFile);
 }
 void playMoo() {
 	playNoise(mooFile);
